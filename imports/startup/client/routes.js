@@ -21,12 +21,19 @@ FlowRouter.route('/student', {
    }
 });
 
-FlowRouter.route('/student/Dashboard', {
+FlowRouter.route('/student/dashboard', {
+    name: 'Student.dashboard',
    action() {
-      redirectIfNotLoggedIn('/test');
-
+    //   redirectIfNotLoggedIn('/test');
+      BlazeLayout.render('App_body', { main: 'StudentDashboard' });
    }
 });
+
+FlowRouter.route('/student/courses', {
+    action() {
+       redirectIfNotLoggedIn('/test'); 
+    }
+ });
 
 FlowRouter.route('/auth', {
    action() {
@@ -36,11 +43,18 @@ FlowRouter.route('/auth', {
 
 
 FlowRouter.route('/courses', {
+    name: 'Courses.show',
    action() {
-      //
+        BlazeLayout.render('App_body', { main: 'Courses' });
    }
 });
 
+FlowRouter.route('/courses/:_code', {
+    name: 'Course.details',
+    action(params, queryParams) {
+        BlazeLayout.render('App_body', { main: 'CourseDetails' });
+    }
+ });
 
 FlowRouter.notFound = {
    action() {

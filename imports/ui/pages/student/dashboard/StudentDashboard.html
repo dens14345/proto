@@ -1,0 +1,43 @@
+<template name="StudentDashboard">
+    <section id="main">
+        <section id="content">
+            <div class="container">
+                <div class="block-header">
+                    <h2>Dashboard</h2>
+                    <small>Currently enrolled classes:</small>
+                </div>
+                
+                {{#if classes.count}}
+                <div class="row">
+                    {{#each classes}}
+                        {{> class }}
+                    {{/each}}
+                </div>
+                {{else}}
+                <div class="row text-center">
+                    You have no currently enrolled class.<br>
+                    Enroll now!<br>
+                    <a class="btn btn-success" href="{{pathFor 'Courses.show'}}">View All Courses</a>
+                </div>
+                {{/if}}
+
+            </div>
+        </section>
+    </section>
+</template>
+
+
+<template name="class">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header bgm-purple">
+                <h2>{{ title }} <small>{{ description }}</small></h2>
+            </div>
+
+            <div class="card-body card-padding">
+                <p>Prof. {{ firstName }} {{ lastName }}</p>
+                <p>{{ startDatetime }} </p>
+            </div>
+        </div>
+    </div>
+</template>

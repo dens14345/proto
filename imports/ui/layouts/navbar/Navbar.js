@@ -1,13 +1,17 @@
+import { Template } from 'meteor/templating';
+
+import './Navbar.html';
+
 Template.Navbar.onCreated(function () {
-   this.autorun(() => {
-      // Meteor.subscribe('organizationsPerMember', Meteor.userId());
-      Meteor.subscribe('organizations');
-      Meteor.subscribe('reports');
-      Meteor.subscribe('files');
+//    this.autorun(() => {
+//       // Meteor.subscribe('organizationsPerMember', Meteor.userId());
+//       Meteor.subscribe('organizations');
+//       Meteor.subscribe('reports');
+//       Meteor.subscribe('files');
 
 
 
-   });
+//    });
 });
 
 Template.Navbar.helpers({
