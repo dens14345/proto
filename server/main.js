@@ -1,5 +1,7 @@
+import { Accounts } from 'meteor/accounts-base';
 
-import {Accounts }from 'meteor/accounts-base';
+import '../imports/api/classes/classes.js';
+import '../imports/api/courses/courses.js';
 
 
 Accounts.onCreateUser((options, user) => {

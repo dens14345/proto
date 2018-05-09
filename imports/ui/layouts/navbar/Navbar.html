@@ -1,13 +1,12 @@
 <template name="Navbar">
-  <nav>
-     <ul>
-        <li>Test</li>
-        <li>Test</li>
-        <li>Test</li>
-     </ul>
-  </nav>
+  <header id="header" class="clearfix">
+      <ul class="h-inner">
+          <li class="hi-logo hidden-xs">
+              <a href="{{pathFor 'Student.dashboard'}}">Mini Proto</a>
+          </li>
+          <li class="m-l-25">
+            <a class="btn btn-success" href="{{pathFor 'Courses.show'}}">View All Courses</a>
+          </li>
+      </ul>        
+  </header>
 </template>
-
-
-
-
