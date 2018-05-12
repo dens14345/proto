@@ -1,0 +1,37 @@
+<template name="Courses">
+    <section id="main">
+        <section id="content">
+            <div class="container">
+                <div class="block-header">
+                    <h2>Viewing All Courses</h2>
+                </div>
+                
+                {{#if courses.count}}
+                <div class="row">
+                    {{#each courses}}
+                        {{> course }}
+                    {{/each}}
+                </div>
+                {{else}}
+                <div class="row text-center">
+                    Currently no courses as of this moment.<br>
+                    Come back later.<br>
+                    Thank you!
+                </div>
+                {{/if}}
+
+            </div>
+        </section>
+    </section>
+</template>
+
+
+<template name="course">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-header bgm-cyan">
+                <h2>{{ title }} <small>{{ description }}</small></h2>
+            </div>
+        </div>
+    </div>
+</template>
