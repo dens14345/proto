@@ -2,3 +2,9 @@
 
 import '../../api/links/methods.js';
 import '../../api/links/server/publications.js';
+import '../../api/classes/classes.js';
+import '../../api/courses/courses.js';
+
+
+
+

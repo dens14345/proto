@@ -4,9 +4,10 @@
             <div class="container">
                 <div class="block-header">
                     <h2>Viewing All Courses</h2>
+                     <button id="btnAddCourse" class="btn btn-success">Insert course with faker</button>
                 </div>
-                
-                {{#if courses.count}}
+
+                {{#if courses}}
                 <div class="row">
                     {{#each courses}}
                         {{> course }}
